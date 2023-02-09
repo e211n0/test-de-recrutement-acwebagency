@@ -20,19 +20,45 @@ class Movie
         $this->title = $title;
         $this->priceCode = $priceCode;
     }
-
+    
+    /**
+     * getPriceCode
+     *
+     * @return int
+     */
     public function getPriceCode(): int
     {
         return $this->priceCode;
     }
-
+    
+    /**
+     * setPriceCode
+     *
+     * @param  mixed $code
+     * @return void
+     */
     public function setPriceCode(int $code)
     {
         return $this->priceCode = $code;
     }
-
+    
+    /**
+     * getTitle
+     *
+     * @return string
+     */
     public function getTitle(): string
     {
         return $this->title;
+    }
+
+    /**
+     * setTitle
+     *
+     * @return string
+     */
+    public function setTitle(string $title)
+    {
+        return $this->title = $title;;
     }
 }

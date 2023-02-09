@@ -8,21 +8,53 @@ namespace App;
 
 class Customer
 {
+
+    
+    private string $name;
+    private array $rentals = [];
+
+    
     public function __construct(String $name)
     {
         $this->name = $name;
     }
-
+    
+    /**
+     * addRental
+     *
+     * @param  mixed $rental
+     * @return void
+     */
     public function addRental(Rental $rental)
     {
         return $this->rentals[] = $rental;
     }
-
+    
+    /**
+     * getName
+     *
+     * @return string
+     */
     public function getName(): string
     {
         return $this->name;
     }
 
+    /**
+     * setName
+     *
+     * @return void
+     */
+    public function setName($name)
+    {
+        return $this->name = $name;
+    }
+    
+    /**
+     * statement
+     *
+     * @return string
+     */
     public function statement(): string {
         $totalAmount = 0.0;
         $frequentRenterPoints = 0;
@@ -67,7 +99,4 @@ class Customer
 
         return $result;
     }
-
-    private string $name;
-    private array $rentals = [];
 }
